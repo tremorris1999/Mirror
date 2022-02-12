@@ -15,6 +15,7 @@ namespace Mirror
     {
         public:
         Mesh(std::vector<glm::vec3> vertices, std::vector<glm::vec3> normals, std::vector<glm::vec2> tcoords, std::vector<unsigned int> indices);//, std::vector<Texture> textures);
+        ~Mesh();
         void render(Shader &shader) override;
 
         private:

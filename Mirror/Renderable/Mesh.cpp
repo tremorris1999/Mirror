@@ -37,6 +37,11 @@ namespace Mirror
         glBindVertexArray(0);
     }
 
+    Mesh::~Mesh()
+    {
+        free(VBO);
+    }
+
     void Mesh::render(Shader &shader)
     {
         shader.use();

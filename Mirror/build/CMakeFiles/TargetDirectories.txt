@@ -1,3 +1,0 @@
-C:/dev/Mirror/build/CMakeFiles/main.dir
-C:/dev/Mirror/build/CMakeFiles/edit_cache.dir
-C:/dev/Mirror/build/CMakeFiles/rebuild_cache.dir

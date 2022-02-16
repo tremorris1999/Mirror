@@ -1,5 +1,5 @@
 #pragma once
-#include "../Mirror/MirrorCore.hpp"
+#include "../MirrorCore.hpp"
 
 namespace Mirror
 {

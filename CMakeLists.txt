@@ -1,26 +1,40 @@
-set(CMAKE_BUILD_TYPE Debug)
-cmake_minimum_required(VERSION 3.10)
-include_directories(${CMAKE_SOURCE_DIR}/include)
+﻿cmake_minimum_required ( VERSION 3.8 )
 
-project(Mirror)
+include_directories( BEFORE ${CMAKE_CURRENT_LIST_DIR}/include )
 
-add_executable( main 
-    Mirror/test.cpp
-    Mirror/Management/WindowManager.cpp
-    Mirror/Management/RenderManager.cpp
-    Mirror/Shaders/Shader.cpp
-    Mirror/Renderable/StaticObject.cpp
-    Mirror/IO/ImageLoader.cpp
-    Mirror/Renderable/Mesh.cpp
-    Mirror/Renderable/Model.cpp
-    )
+project ( Mirror )
 
-find_package(OpenGL REQUIRED)
+include( FetchContent )
 
-target_link_libraries(main
-${CMAKE_SOURCE_DIR}/lib/libglew32.a
-${CMAKE_SOURCE_DIR}/lib/libglfw3.a
-${OPENGL_LIBRARIES}
-${CMAKE_SOURCE_DIR}/lib/libassimp.a
-${CMAKE_SOURCE_DIR}/lib/libzlib.a
+## glfw
+FetchContent_Declare ( glfw
+    GIT_REPOSITORY https://github.com/glfw/glfw.git
+)
+
+## glew
+FetchContent_Declare ( glew
+    GIT_REPOSITORY https://github.com/Perlmint/glew-cmake.git
+)
+
+FetchContent_MakeAvailable( 
+    glew
+    glfw
+)
+
+add_executable ( Mirror 
+Mirror/test.cpp
+Mirror/Management/WindowManager.cpp
+Mirror/Management/RenderManager.cpp
+Mirror/Shaders/Shader.cpp
+Mirror/Renderable/StaticObject.cpp
+Mirror/IO/ImageLoader.cpp
+)
+
+
+find_package( OpenGL REQUIRED )
+
+target_link_libraries ( Mirror
+		${OPENGL_LIBRARIES}
+		libglew_static
+		glfw
 )

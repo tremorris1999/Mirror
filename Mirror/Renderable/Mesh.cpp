@@ -39,7 +39,7 @@ namespace Mirror
 
     Mesh::~Mesh()
     {
-        free(VBO);
+        delete VBO;
     }
 
     void Mesh::render(Shader &shader)

@@ -32,9 +32,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/msys64/mingw64/bin/objdump.exe")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("C:/dev/Mirror/build/_deps/glew-build/cmake_install.cmake")
+  include("C:/dev/Mirror/build/_deps/glfw-build/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

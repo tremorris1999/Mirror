@@ -1,7 +1,6 @@
-#include "../Mirror/MirrorCore.hpp"
-#include "../Mirror/Management/WindowManager.hpp"
-#include "../Mirror/Management/RenderManager.hpp"
-#include "../Mirror/Renderable/StaticObject.hpp"
+#include "MirrorCore.hpp"
+#include "Management/WindowManager.hpp"
+#include "Management/RenderManager.hpp"
 
 int main()
 {

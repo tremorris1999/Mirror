@@ -16,9 +16,15 @@ FetchContent_Declare ( glew
     GIT_REPOSITORY https://github.com/Perlmint/glew-cmake.git
 )
 
+## mirrorlog
+FetchContent_Declare ( mirrorlog 
+    GIT_REPOSITORY https://github.com/tremorris1999/MirrorLog.git
+)
+
 FetchContent_MakeAvailable( 
     glew
     glfw
+    mirrorlog
 )
 
 add_executable ( Mirror 
@@ -37,4 +43,5 @@ target_link_libraries ( Mirror
 		${OPENGL_LIBRARIES}
 		libglew_static
 		glfw
+        mirrorlog
 )

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/mirrorlog-populate"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/mirrorlog-populate.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/mirrorlog-populate-complete.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-build.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-configure.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-download.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-install.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-patch.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-test.rule"
+		},
+		{
+			"file" : "C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/mirrorlog-populate-prefix/src/mirrorlog-populate-stamp/mirrorlog-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mirrorlog-populate"
+		],
+		"name" : "mirrorlog-populate"
+	}
+}

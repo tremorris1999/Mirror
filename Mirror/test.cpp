@@ -1,10 +1,18 @@
 #include "MirrorCore.hpp"
 #include "Management/WindowManager.hpp"
 #include "Management/RenderManager.hpp"
+#include <mirrorlog/MirrorLog.hpp>
 
 int main()
 {
+    MirrorLog::ConsoleLogger consoleLogger;
+    consoleLogger.Log(MirrorLog::LogType::Debug, "Console logger created");
+
+    MirrorLog::SetLogger(consoleLogger);
+    MirrorLog::LogDebug("Set global logger");
+
     Mirror::WindowManager wm(1280, 720, "Test Window");
+    MirrorLog::LogDebug("Created window manager");
     Mirror::RenderManager rm;
 
     //temp

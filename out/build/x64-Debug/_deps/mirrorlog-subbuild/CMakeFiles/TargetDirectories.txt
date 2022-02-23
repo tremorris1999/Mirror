@@ -1,0 +1,3 @@
+C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/mirrorlog-populate.dir
+C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/edit_cache.dir
+C:/dev/Mirror/out/build/x64-Debug/_deps/mirrorlog-subbuild/CMakeFiles/rebuild_cache.dir

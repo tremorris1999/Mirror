@@ -1,7 +1,7 @@
 #pragma once
-#include "../Mirror/MirrorCore.hpp" 
+#include "MirrorCore.hpp" 
 #include "IRenderable.hpp"
-#include "../Mirror/Shaders/Shader.hpp"
+#include "Shaders/Shader.hpp"
 
 namespace Mirror
 {

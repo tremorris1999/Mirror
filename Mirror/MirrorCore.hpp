@@ -9,4 +9,4 @@
 #include <string>
 #include <vector>
 #include <stb/stb_image.h>
-//#include <mirrorlog/MirrorLog.hpp>
+#include <mirrorlog/MirrorLog.hpp>

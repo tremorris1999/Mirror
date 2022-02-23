@@ -1,4 +1,4 @@
-#include "../Mirror/MirrorCore.hpp"
+#include "MirrorCore.hpp"
 #include "IRenderable.hpp"
 #include "Mesh.hpp"
 

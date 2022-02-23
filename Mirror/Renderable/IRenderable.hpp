@@ -1,6 +1,6 @@
  #pragma once
- #include "../MirrorCore.hpp"
- #include "../Shaders/Shader.hpp"
+ #include "MirrorCore.hpp"
+ #include "Shaders/Shader.hpp"
  #define TINYOBJLOADER_IMPLEMENTATION
 
  namespace Mirror

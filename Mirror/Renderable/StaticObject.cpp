@@ -12,7 +12,7 @@ namespace Mirror
         this->numTC = numTC;
 
         int w, h, nrc;
-        unsigned char* img_data = stbi_load("../Mirror/Textures/outline.png", &w, &h, &nrc, 0);
+        unsigned char* img_data = stbi_load("../Mirror/Textures/container.jpg", &w, &h, &nrc, 0);
 
         unsigned int texture;
         glGenTextures(1, &texture);
@@ -40,8 +40,8 @@ namespace Mirror
     void StaticObject::render(Shader &shader)
     {
         shader.use();
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        //glDrawArrays(GL_TRIANGLES, 0, 36);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     }
 
 }

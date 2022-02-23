@@ -1,6 +1,7 @@
 ﻿cmake_minimum_required ( VERSION 3.8 )
 
 include_directories( BEFORE ${CMAKE_CURRENT_LIST_DIR}/include )
+include_directories( ${CMAKE_CURRENT_LIST_DIR}/Mirror )
 
 project ( Mirror )
 
@@ -33,7 +34,7 @@ Mirror/Management/WindowManager.cpp
 Mirror/Management/RenderManager.cpp
 Mirror/Shaders/Shader.cpp
 Mirror/Renderable/StaticObject.cpp
-Mirror/IO/ImageLoader.cpp
+
 )
 
 

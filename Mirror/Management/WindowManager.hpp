@@ -1,4 +1,4 @@
-#include "../MirrorCore.hpp"
+#include "MirrorCore.hpp"
 #include <mirrorlog/MirrorLog.hpp>
 
 namespace Mirror

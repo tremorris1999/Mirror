@@ -1,9 +1,9 @@
 Determining if the include file pthread.h exists failed with the following output:
 Change Dir: C:/dev/Mirror/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_91604 && [1/2] Building C object CMakeFiles\cmTC_91604.dir\CheckIncludeFile.c.obj
-FAILED: CMakeFiles/cmTC_91604.dir/CheckIncludeFile.c.obj 
-C:\PROGRA~1\LLVM\bin\clang-cl.exe  /nologo   -m64 -fdiagnostics-absolute-paths  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_91604.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_91604.dir\ -c -- C:\dev\Mirror\out\build\x64-Debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5d4f1 && [1/2] Building C object CMakeFiles\cmTC_5d4f1.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_5d4f1.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~1\LLVM\bin\clang-cl.exe  /nologo   -m64 -fdiagnostics-absolute-paths  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_5d4f1.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_5d4f1.dir\ -c -- C:\dev\Mirror\out\build\x64-Debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
 C:\dev\Mirror\out\build\x64-Debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error: 'pthread.h' file not found
 #include <pthread.h>
          ^~~~~~~~~~~

@@ -9,10 +9,9 @@ int main()
     consoleLogger.Log(MirrorLog::LogType::Debug, "Console logger created");
 
     MirrorLog::SetLogger(consoleLogger);
-    MirrorLog::LogDebug("Set global logger");
+    DLOG("Set global logger");
 
     Mirror::WindowManager wm(1280, 720, "Test Window");
-    MirrorLog::LogDebug("Created window manager");
     Mirror::RenderManager rm;
 
     //temp

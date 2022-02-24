@@ -8,5 +8,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <stb/stb_image.h>
 #include <mirrorlog/MirrorLog.hpp>
+
+#define DLOG MirrorLog::LogDebug
+#define ELOG MirrorLog::LogError
+#define ILOG MirrorLog::LogInfo
+#define WLOG MirrorLog::LogWarning

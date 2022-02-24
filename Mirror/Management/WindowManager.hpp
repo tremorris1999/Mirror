@@ -1,5 +1,4 @@
 #include "MirrorCore.hpp"
-#include <mirrorlog/MirrorLog.hpp>
 
 namespace Mirror
 {

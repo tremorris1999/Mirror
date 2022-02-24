@@ -2,7 +2,6 @@
 #include "MirrorCore.hpp"
 #include "Shaders/Shader.hpp"
 #include "Renderable/IRenderable.hpp"
-#define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 
 namespace Mirror

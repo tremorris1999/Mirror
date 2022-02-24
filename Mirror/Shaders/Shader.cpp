@@ -7,11 +7,15 @@ namespace Mirror
     Shader::Shader(const char* vertName, const char* fragName)
     {
         this->program = glCreateProgram();
+        DLOG("created program");
         unsigned int vert = compileShader(vertName, GL_VERTEX_SHADER);
         unsigned int frag = compileShader(fragName, GL_FRAGMENT_SHADER);
+        DLOG("shaders created");
         glAttachShader(program, vert);
         glAttachShader(program, frag);
+        DLOG("shaders attached");
         glLinkProgram(program);
+        DLOG("shaders linked");
         glDeleteShader(vert);
         glDeleteShader(frag);
     }
@@ -19,6 +23,7 @@ namespace Mirror
     Shader::~Shader()
     {
         glDeleteProgram(this->program);
+        DLOG("deleted program");
     }
 
     void Shader::use()
@@ -64,7 +69,7 @@ namespace Mirror
         glCompileShader(shader);
         char buf[512];
         glGetShaderInfoLog(shader, 512, NULL, buf);
-        std::cout << buf << std::endl;
+        DLOG(buf);
 
         return shader;
     }

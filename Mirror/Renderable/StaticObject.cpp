@@ -1,4 +1,5 @@
 #include "StaticObject.hpp"
+#include <stb/stb_image.h>
 
 namespace Mirror
 {

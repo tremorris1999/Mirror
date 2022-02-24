@@ -16,11 +16,13 @@ namespace Mirror
         glGenBuffers(1, &EBO);
         //shader->setMat4F("view", glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -3.0f)));
         shader->setMat4F("projection", glm::perspective(glm::radians(45.0f), 16.0f / 9.0f, 0.1f, 100.0f));
+        DLOG("render manager created");
     }
 
     RenderManager::~RenderManager()
     {   
         delete shader;
+        DLOG("render manager deleted");
     }
 
     void RenderManager::CreateRendObj(float* position, float* vertices, int numVerts, int* indices, int numInd, float* textureCoords, int numTC)

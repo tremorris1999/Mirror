@@ -27,6 +27,7 @@ namespace Mirror
 
     WindowManager::~WindowManager()
     {
+        DLOG("window deleted");
         glfwTerminate();
         DLOG("glfw terminated");
     }

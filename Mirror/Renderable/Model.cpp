@@ -5,6 +5,12 @@ namespace Mirror
     Model::Model(std::string path)
     {
         loadModel(path);
+        DLOG("Model created");
+    }
+
+    Model::~Model()
+    {
+        DLOG("Model deleted");
     }
 
     void Model::render(Shader &shader)
@@ -15,7 +21,7 @@ namespace Mirror
 
     void Model::loadModel(std::string path)
     {
-        tinyobj::attrib
+
     }
 
 }

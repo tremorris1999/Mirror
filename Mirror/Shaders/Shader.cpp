@@ -18,12 +18,13 @@ namespace Mirror
         DLOG("shaders linked");
         glDeleteShader(vert);
         glDeleteShader(frag);
+        DLOG("created shader program");
     }
 
     Shader::~Shader()
     {
         glDeleteProgram(this->program);
-        DLOG("deleted program");
+        DLOG("deleted shader program");
     }
 
     void Shader::use()

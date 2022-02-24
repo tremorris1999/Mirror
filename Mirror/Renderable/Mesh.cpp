@@ -35,11 +35,13 @@ namespace Mirror
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * 4, &indices[0], GL_STATIC_DRAW);
 
         glBindVertexArray(0);
+        DLOG("Mesh created");
     }
 
     Mesh::~Mesh()
     {
         delete VBO;
+        DLOG("Mesh deleted.");
     }
 
     void Mesh::render(Shader &shader)

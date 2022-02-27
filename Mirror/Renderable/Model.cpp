@@ -38,31 +38,28 @@ namespace Mirror
         if (!loaded)
             return;
 
-        for (size_t i = 0; i < shapes.size(); i++)
+        std::vector<float> vertices;
+        std::vector<float> normals;
+        std::vector<float> textureCoordinates;
+        std::vector<unsigned int> indices;
+
+        tinyobj::mesh_t mesh = shapes[0].mesh;
+        for (size_t j = 0; j < mesh.indices.size(); j ++)
         {
-            std::vector<float> vertices;
-            std::vector<float> normals;
-            std::vector<float> textureCoordinates;
-            std::vector<unsigned int> indices;
+            if (j < attrib.vertices.size())
+                vertices.push_back(attrib.vertices[j]);
 
-            tinyobj::mesh_t mesh = shapes[i].mesh;
-            for (size_t j = 0; j < mesh.indices.size(); j ++)
-            {
-                if (j < attrib.vertices.size())
-                    vertices.push_back(attrib.vertices[j]);
+            if (j < attrib.normals.size())
+                normals.push_back(attrib.normals[j]);
 
-                if (j < attrib.normals.size())
-                    normals.push_back(attrib.normals[j]);
+            if (j < attrib.texcoords.size())
+                textureCoordinates.push_back(attrib.texcoords[j]);
 
-                if (j < attrib.texcoords.size())
-                    textureCoordinates.push_back(attrib.texcoords[j]);
-
-                indices.push_back(mesh.indices[j].vertex_index);
+            indices.push_back(mesh.indices[j].vertex_index);
             }
 
             Mesh new_mesh(vertices, normals, textureCoordinates, indices);
             meshes.push_back(new_mesh);
-        }
     }
 
 }

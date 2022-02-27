@@ -10,6 +10,7 @@ namespace Mirror
         public:
         Model(std::string path);
         ~Model();
+        void LoadModel(std::string path);
         void render(Shader &shader) override;
 
         private:

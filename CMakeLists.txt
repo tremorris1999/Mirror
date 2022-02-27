@@ -35,6 +35,8 @@ add_executable ( Mirror
 "Mirror/Shaders/Shader.cpp"
 "Mirror/Renderable/StaticObject.cpp"
 "Mirror/Management/stb_implementation.cpp"
+"Mirror/Renderable/Model.cpp"
+"Mirror/Renderable/Mesh.cpp"
 )
 
 

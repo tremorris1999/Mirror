@@ -2,7 +2,7 @@
 
 namespace Mirror
 {
-    Mesh::Mesh(std::vector<glm::vec3> vertices, std::vector<glm::vec3> normals, std::vector<glm::vec2> tcoords, std::vector<unsigned int> indices)//, std::vector<Texture> textures)
+    Mesh::Mesh(std::vector<float> vertices, std::vector<float> normals, std::vector<float> tcoords, std::vector<unsigned int> indices)//, std::vector<Texture> textures)
     {
         this->vertices = vertices;
         this->normals = normals;
@@ -11,23 +11,29 @@ namespace Mirror
         //this->textures = textures;
 
         glGenVertexArrays(1, &VAO);
-        VBO = (unsigned int*)malloc(sizeof(unsigned int));
+        VBO = (unsigned int*)malloc(3 * sizeof(unsigned int));
         glGenBuffers(3, VBO);
         glGenBuffers(1, &EBO);
 
+        if (!VBO)
+        {
+            ELOG("Failed to allocate VBO");
+            exit(-1);
+        }
+
         glBindVertexArray(VAO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
-        glBufferData(GL_ARRAY_BUFFER, vertices.size() * 12, &vertices[0], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, vertices.size() * 4, &vertices[0], GL_STATIC_DRAW);
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
         glBindBuffer(GL_ARRAY_BUFFER, VBO[1]);
-        glBufferData(GL_ARRAY_BUFFER, normals.size() * 12, &normals[0], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, normals.size() * 4, &normals[0], GL_STATIC_DRAW);
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
         glBindBuffer(GL_ARRAY_BUFFER, VBO[2]);
-        glBufferData(GL_ARRAY_BUFFER, tcoords.size() * 8, &tcoords[0], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, tcoords.size() * 4, &tcoords[0], GL_STATIC_DRAW);
         glEnableVertexAttribArray(2);
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, 0);
 

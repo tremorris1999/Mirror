@@ -28,7 +28,6 @@ namespace Mirror
         std::vector<tinyobj::material_t> materials;
         std::string warnings;
         std::string errors;
-
         bool loaded = tinyobj::LoadObj(&attrib, &shapes, &materials, &warnings, &errors, path.c_str(), NULL, true, true);
 
         if (!warnings.empty())
@@ -36,30 +35,53 @@ namespace Mirror
         if (!errors.empty())
             ELOG(errors);
         if (!loaded)
-            return;
-
-        std::vector<float> vertices;
-        std::vector<float> normals;
-        std::vector<float> textureCoordinates;
-        std::vector<unsigned int> indices;
-
-        tinyobj::mesh_t mesh = shapes[0].mesh;
-        for (size_t j = 0; j < mesh.indices.size(); j ++)
         {
-            if (j < attrib.vertices.size())
-                vertices.push_back(attrib.vertices[j]);
+            ELOG("Failed to load obj file.");
+            exit(-1);
+        }
 
-            if (j < attrib.normals.size())
-                normals.push_back(attrib.normals[j]);
+        // iterate shapes
+        
+        for (size_t s = 0; s < shapes.size(); s++)
+        {
+            std::vector<float> vertices;
+            std::vector<float> normals;
+            std::vector<float> texCoords;
+            std::vector<unsigned int> indices;
+            tinyobj::mesh_t mesh = shapes[s].mesh;
+            size_t offset = 0;
 
-            if (j < attrib.texcoords.size())
-                textureCoordinates.push_back(attrib.texcoords[j]);
+            // iterate faces
+            for (size_t f = 0; f < mesh.num_face_vertices.size(); f++)
+            {
+                // iterate vertices
+                for (size_t v = 0; v < 3; v++)
+                {
+                    tinyobj::index_t idx = mesh.indices[offset + v];
 
-            indices.push_back(mesh.indices[j].vertex_index);
+                    vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index)]);
+                    vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index) + 1]);
+                    vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index) + 2]);
+
+                    if (idx.normal_index > -1)
+                    {
+                        normals.push_back(attrib.normals[3 * size_t(idx.normal_index)]);
+                        normals.push_back(attrib.normals[3 * size_t(idx.normal_index) + 1]);
+                        normals.push_back(attrib.normals[3 * size_t(idx.normal_index) + 2]);
+                    }
+
+                    if (idx.texcoord_index > -1)
+                    {
+                        texCoords.push_back(attrib.texcoords[2 * size_t(idx.texcoord_index)]);
+                        texCoords.push_back(attrib.texcoords[2 * size_t(idx.texcoord_index) + 1]);
+                    }
+                }
+
+                offset += 3;
             }
 
-            Mesh new_mesh(vertices, normals, textureCoordinates, indices);
-            meshes.push_back(new_mesh);
+            meshes.push_back(Mesh(vertices, normals, texCoords));
+        }
     }
 
 }

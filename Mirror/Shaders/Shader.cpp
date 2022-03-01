@@ -52,6 +52,11 @@ namespace Mirror
         glUniformMatrix4fv(glGetUniformLocation(program, name), 1, GL_FALSE, glm::value_ptr(val));
     }
 
+    void Shader::setVec3F(const char* name, float f1, float f2, float f3)
+    {
+        glUniform3f(glGetUniformLocation(program, name), f1, f2, f3);
+    }
+
     unsigned int Shader::compileShader(const char* path, GLenum type)
     {
         unsigned int shader;

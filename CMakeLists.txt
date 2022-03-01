@@ -22,10 +22,15 @@ FetchContent_Declare ( mirrorlog
     GIT_REPOSITORY https://github.com/tremorris1999/MirrorLog.git
 )
 
+FetchContent_Declare ( tinyobjloader
+    GIT_REPOSITORY https://github.com/tinyobjloader/tinyobjloader.git
+)
+
 FetchContent_MakeAvailable( 
     glew
     glfw
     mirrorlog
+    tinyobjloader
 )
 
 add_executable ( Mirror 
@@ -35,6 +40,8 @@ add_executable ( Mirror
 "Mirror/Shaders/Shader.cpp"
 "Mirror/Renderable/StaticObject.cpp"
 "Mirror/Management/stb_implementation.cpp"
+"Mirror/Renderable/Mesh.cpp"
+"Mirror/Renderable/Model.cpp"
 )
 
 

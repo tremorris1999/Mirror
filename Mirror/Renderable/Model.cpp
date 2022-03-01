@@ -6,7 +6,7 @@ namespace Mirror
 {
     Model::Model(std::string path)
     {
-        LoadModel(path);
+        loadModel(path);
         DLOG("Model created");
     }
 
@@ -21,7 +21,7 @@ namespace Mirror
             meshes[i].render(shader);
     }
 
-    void Model::LoadModel(std::string path)
+    void Model::loadModel(std::string path)
     {
         tinyobj::attrib_t attrib;
         std::vector<tinyobj::shape_t> shapes;
@@ -41,7 +41,6 @@ namespace Mirror
         }
 
         // iterate shapes
-        
         for (size_t s = 0; s < shapes.size(); s++)
         {
             std::vector<float> vertices;

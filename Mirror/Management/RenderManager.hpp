@@ -12,13 +12,11 @@ namespace Mirror
         RenderManager();
         ~RenderManager();
         void Render();
-        void CreateRendObj(float* position, float* vertices, int numVerts, int* indices, int numInd, float* textureCoords, int numTC);
-        unsigned int getCurrentShader();
+        void AddModel(std::string path);
+        Shader getShader();
 
         private:
         Shader* shader;
-        unsigned int VAO;
-        unsigned int* VBO;
-        unsigned int EBO;
+        std::vector<IRenderable*> items;
     };
 }

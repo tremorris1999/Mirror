@@ -92,7 +92,7 @@ namespace Mirror
     Mesh::~Mesh()
     {
         //delete VBO;
-        DLOG("Mesh deleted.");
+        //DLOG("Mesh deleted.");
     }
 
     void Mesh::render(Shader &shader)

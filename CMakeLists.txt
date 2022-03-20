@@ -22,15 +22,16 @@ FetchContent_Declare ( mirrorlog
     GIT_REPOSITORY https://github.com/tremorris1999/MirrorLog.git
 )
 
-FetchContent_Declare ( tinyobjloader
-    GIT_REPOSITORY https://github.com/tinyobjloader/tinyobjloader.git
+FetchContent_Declare ( mirrormodel
+    GIT_REPOSITORY https://github.com/tremorris1999/MirrorModel.git
+    GIT_TAG origin/stable-1.01
 )
 
 FetchContent_MakeAvailable( 
     glew
     glfw
     mirrorlog
-    tinyobjloader
+    mirrormodel
 )
 
 add_executable ( Mirror 
@@ -51,5 +52,6 @@ target_link_libraries ( Mirror
 		${OPENGL_LIBRARIES}
 		libglew_static
 		glfw
-        	mirrorlog
+        mirrorlog
+        mirrormod
 )

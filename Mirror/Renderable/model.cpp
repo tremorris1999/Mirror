@@ -1,8 +1,8 @@
-#include "Model.hpp"
+#include "model.h"
 #include <mirrormod/mirrormod.h>
 #include <chrono>
 
-namespace Mirror
+namespace mirror
 {
     Model::Model(std::string path)
     {

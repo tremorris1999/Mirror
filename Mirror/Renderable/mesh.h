@@ -1,9 +1,9 @@
 #pragma once
-#include "MirrorCore.hpp" 
+#include "mirror_core.h"
 #include "renderable.h"
-#include "Shaders/Shader.hpp"
+#include "Shaders/shader.h"
 
-namespace Mirror
+namespace mirror
 {
     struct texture_t
     {

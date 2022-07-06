@@ -1,6 +1,6 @@
-#include "MirrorCore.hpp"
+#include "mirror_core.h"
 
-namespace Mirror
+namespace mirror
 {
     class WindowManager
     {
@@ -10,7 +10,7 @@ namespace Mirror
         GLFWwindow* getWindow();
 
         private:
-        GLFWwindow* window;
+        GLFWwindow* m_window;
 
     };
 

@@ -1,9 +1,9 @@
-#include "MirrorCore.hpp"
+#include "mirror_core.h"
 #include "renderable.h"
 #include "mesh.h"
 
 
-namespace Mirror
+namespace mirror
 {
     class Model : public Renderable
     {

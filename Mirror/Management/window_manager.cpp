@@ -6,8 +6,8 @@ namespace mirror
     {
         glfwInit();
         DLOG("glfw initialized");
-        window = glfwCreateWindow(w, h, name, NULL, NULL);
-        if(window == NULL)
+        m_window = glfwCreateWindow(w, h, name, NULL, NULL);
+        if(m_window == NULL)
         {
             ELOG("Failed to create window.\r\n");
             glfwTerminate();
@@ -15,9 +15,9 @@ namespace mirror
         }
         DLOG("window created");
 
-        glfwMakeContextCurrent(window);
+        glfwMakeContextCurrent(m_window);
         glViewport(0, 0, w, h);
-        glfwSetFramebufferSizeCallback(window, resize);
+        glfwSetFramebufferSizeCallback(m_window, resize);
         glewInit();
         DLOG("glew initialized");
 
@@ -34,7 +34,7 @@ namespace mirror
 
     GLFWwindow* WindowManager::getWindow()
     {
-        return window;
+        return m_window;
     }
 
     void resize(GLFWwindow* window, int width, int height)

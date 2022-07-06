@@ -1,12 +1,14 @@
  #pragma once
- #include "MirrorCore.hpp"
- #include "Shaders/Shader.hpp"
+ #include "mirror_core.h"
+ #include "Shaders/shader.h"
 
- namespace Mirror
+ namespace mirror
  {
      class Renderable
      {
          public:
          virtual void render(Shader &shader) = 0;
+         Renderable() = default;
+         ~Renderable() = default;
      };
  }

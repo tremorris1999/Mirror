@@ -1,8 +1,8 @@
-#include "Shader.hpp"
+#include "shader.h"
 #include <fstream>
 #include <sstream>
 
-namespace Mirror
+namespace mirror
 {
     Shader::Shader(const char* vertName, const char* fragName)
     {

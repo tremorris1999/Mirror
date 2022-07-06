@@ -1,7 +1,7 @@
 #pragma once
-#include "MirrorCore.hpp"
+#include "mirror_core.h"
 
-namespace Mirror
+namespace mirror
 {
     class Shader
     {

@@ -1,8 +1,9 @@
 #pragma once
-#include "MirrorCore.hpp"
-#include "Shaders/Shader.hpp"
+#include "mirror_core.h"
+#include "Shaders/shader.h"
 #include "Renderable/renderable.h"
-#include <stb/stb_image.h>
+#include <vector>
+#include <memory>
 
 namespace mirror
 {
@@ -17,6 +18,6 @@ namespace mirror
 
         private:
         Shader* m_shader;
-        std::vector<Renderable> m_items;
+        std::vector<std::unique_ptr<Renderable>> m_items;
     };
 }

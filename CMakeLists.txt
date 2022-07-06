@@ -35,14 +35,13 @@ FetchContent_MakeAvailable(
 )
 
 add_executable ( Mirror 
-"Mirror/test.cpp"
-"Mirror/Management/WindowManager.cpp"
-"Mirror/Management/RenderManager.cpp"
-"Mirror/Shaders/Shader.cpp"
-"Mirror/Renderable/StaticObject.cpp"
-"Mirror/Management/stb_implementation.cpp"
-"Mirror/Renderable/Mesh.cpp"
-"Mirror/Renderable/Model.cpp"
+		"Mirror/test.cpp"
+		"Mirror/management/window_manager.cpp"
+		"Mirror/Management/render_manager.cpp"
+		"Mirror/Shaders/shader.cpp"
+		"Mirror/Management/stb_implementation.cpp"
+		"Mirror/Renderable/mesh.cpp"
+		"Mirror/Renderable/model.cpp"
 )
 
 

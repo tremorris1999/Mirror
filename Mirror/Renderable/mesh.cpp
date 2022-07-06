@@ -1,6 +1,6 @@
-#include "Mesh.hpp"
+#include "mesh.h"
 
-namespace Mirror
+namespace mirror
 {
     Mesh::Mesh(std::vector<float> vertices, std::vector<float> normals, std::vector<float> tcoords, std::vector<unsigned int> indices)//, std::vector<Texture> textures)
     {

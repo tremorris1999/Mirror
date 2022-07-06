@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/mirrorlog-build/tests",
+		"source" : "cmake-build-debug/_deps/mirrorlog-src/tests"
+	}
+}

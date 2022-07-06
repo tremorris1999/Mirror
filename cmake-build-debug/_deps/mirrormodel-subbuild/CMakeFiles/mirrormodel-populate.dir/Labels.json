@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/mirrormodel-populate"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/mirrormodel-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/mirrormodel-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/mirrormodel-populate-prefix/src/mirrormodel-populate-stamp/mirrormodel-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mirrormodel-populate"
+		],
+		"name" : "mirrormodel-populate"
+	}
+}

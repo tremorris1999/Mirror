@@ -1,0 +1,3 @@
+C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/mirrormodel-populate.dir
+C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/Trevor/CLionProjects/Mirror/cmake-build-debug/_deps/mirrormodel-subbuild/CMakeFiles/rebuild_cache.dir

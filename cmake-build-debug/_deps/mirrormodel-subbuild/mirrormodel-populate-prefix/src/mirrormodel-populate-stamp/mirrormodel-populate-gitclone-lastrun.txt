@@ -1,0 +1,3 @@
+repository='https://github.com/tremorris1999/MirrorModel.git'
+module=''
+tag='origin'

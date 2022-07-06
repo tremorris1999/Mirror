@@ -3,3 +3,5 @@
 /out/*
 /Mirror/.vs/*
 CMakeSettings.json
+/cmake-build-*/**
+/.idea/**

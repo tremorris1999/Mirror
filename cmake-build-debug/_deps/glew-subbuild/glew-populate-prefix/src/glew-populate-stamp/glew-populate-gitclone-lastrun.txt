@@ -1,3 +1,0 @@
-repository='https://github.com/Perlmint/glew-cmake.git'
-module=''
-tag='origin'
